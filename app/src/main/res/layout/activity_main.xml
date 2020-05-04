@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -18,6 +18,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:contentDescription="@string/img_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -31,11 +32,11 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="#4D000000"
-                android:drawableLeft="@drawable/ic_collections_white_18dp"
+                android:drawableStart="@drawable/ic_collections_white_18dp"
                 android:drawablePadding="4dp"
                 android:gravity="center_vertical"
                 android:padding="8dp"
-                android:text="@string/_6_photos"
+                android:text="@string/dummy_photos"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@android:color/white" />
 
@@ -48,7 +49,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/_735"
+            android:text="@string/dummy_value"
             android:textColor="@android:color/black"
             android:textSize="32sp" />
 
@@ -57,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Stock hanya 5 buah"
+            android:text="@string/stock"
             android:textSize="12sp" />
 
         <TextView
@@ -76,7 +77,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
-            android:text="Spesifikasi"
+            android:text="@string/spec"
             android:textSize="12sp" />
 
         <TableLayout
@@ -95,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="Display"
+                    android:text="@string/display"
                     android:textSize="14sp" />
 
                 <TextView
@@ -116,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="Size"
+                    android:text="@string/size"
                     android:textSize="14sp" />
 
                 <TextView
@@ -137,7 +138,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="Battery"
+                    android:text="@string/battery"
                     android:textSize="14sp" />
 
                 <TextView
@@ -148,9 +149,48 @@
                     android:textColor="@android:color/black"
                     android:textSize="14sp" />
             </TableRow>
-
-
         </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/seller"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:src="@drawable/awan"
+                android:layout_centerVertical="true"
+                android:id="@+id/profile_image"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile_image"
+                android:text="@string/my_name"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buy"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp" />
     </LinearLayout>
 
 </ScrollView>
